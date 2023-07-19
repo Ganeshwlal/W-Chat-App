@@ -1,0 +1,14 @@
+@import '~@ctrl/ngx-emoji-mart/picker';
+
+body{
+    margin: 0px;
+    font-family: 'Sofia Sans', sans-serif;
+    font-family: 'Itim', cursive;
+    
+}
+
+.style{
+    opacity: 0;
+}
+
+

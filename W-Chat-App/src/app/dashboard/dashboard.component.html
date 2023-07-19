@@ -1,0 +1,62 @@
+<!-- BACKGROUND -->
+<div id="back-head"></div>
+<div id="back-body"></div>
+
+
+
+<!-- TOP USER DETAILS AND LOGOUT BUTTON -->
+<div id="user-details">
+    <div id="user-profile">
+        <img src="../../assets/profile pic.png" width="50px" alt="">
+        <div id="user-name">{{ loggedUser}}</div>
+    </div>
+    <div id="nothing">
+        
+    </div>
+
+    <div id="add-friend">
+        <button type="button" class="btn btn-primar" routerLink="/user-details" ><i class="fa-solid fa-user"></i></button>
+
+    </div>
+    <div id="user-logout">
+        <i class="fa-sharp fa-solid fa-right-from-bracket" (click)="logout()"></i>
+
+        <!-- <button type="button" class="btn btn-primar"><i class="fa-sharp fa-solid fa-right-from-bracket"></i></button> -->
+    </div>
+    <div class="dots">
+        <a href=""><i class="fa-solid fa-ellipsis-vertical"></i></a>
+
+    </div>
+</div>
+<h1></h1>
+<!-- MAIN CHAT CONTAIER -->
+
+    
+    <div id="chat-container">
+    
+    
+
+
+<app-chat-sidebar (conversationClicked)="onConversationSelected($event)"></app-chat-sidebar>
+
+
+    <!-- MESSAGE BOX -->
+    <div id="chat">
+        <div id="chatPlaceholder" *ngIf="!conversation">
+            <img src="../../assets/whatsapp.jpg" width="400" alt="">
+            <h2>Keep your phone connected</h2>
+            <p>Simple, reliable, private messaging and calling for free*, available all over the world.</p>
+                 <hr>
+
+        </div>
+        <app-chat-screen [conversation]="conversation" *ngIf="conversation"></app-chat-screen>
+    </div>
+
+
+</div>
+    
+
+
+
+
+<!-- /////////////////////////////////////////// -->

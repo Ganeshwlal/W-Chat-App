@@ -1,0 +1,149 @@
+    <!-- CHAT SIDE BAR -->
+    <div id="sidebar">
+
+        <app-delete-contact (onDelete)="ondelete($event)" (onCancel)="oncancel()" [item]="name"></app-delete-contact>
+
+        <!-- <app-edit-contact  [edititem]="number" ></app-edit-contact> -->
+
+
+        <div  id="row1">
+
+              <!-- <div id="sidebarHeader"></div> -->
+
+
+            <div id="searchBox">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input (keyup)="search($event)" [(ngModel)]="searchText" type="text" placeholder="Search">
+    
+            </div>
+        </div>
+
+      
+
+        
+
+
+        <div [ngClass]="number?'style':''" id="sidebarContent">
+
+
+            <!-- <div id="chatBox">
+                All Chat are archived
+            </div> -->
+                <!-- <div class="chat-person" *ngFor="let conversation of (!searchText?conversations:filteredConversations)" (click)="conversationClicked.emit(conversation)"> -->
+                    <!-- <div class="chat-dp">
+                        <img src="../../assets/profile pic.png"  alt="">
+                    </div>
+                    <div class="chat-content">
+                        <div class="chat-content-header">
+                            <div class="chat-name">{{conversation.name}}</div>
+                            <div class="chat-time">{{conversation.time}}</div>
+                        </div>
+                        <div class="chat-content-msg">
+                            <i *ngIf="!conversation.lastMsgRead" class="fa-solid fa-check-double " style="color: grey;"></i>
+                            <i *ngIf="conversation.lastMsgRead" class="fa-solid fa-check-double " style="color: blue;"></i>
+                            {{conversation.lastMsg}}</div>
+
+                        
+                    </div>
+                </div> -->
+
+
+                <!-- <div class="chat-person" *ngFor="let contact of getcontact | filter:searchTerm:'name' "   (click)="conversationClicked.emit(contact)"> -->
+
+                    <div class="chat-person" *ngFor="let contact of getcontact | filter:searchTerm:'name' " (click)="getUser(contact)"  (click)="conversationClicked.emit(contact)">
+
+                    <div class="chat-dp">
+
+                        
+
+                        <img src="../../assets/profile pic.png"  alt="">
+                    </div>
+                    <div class="chat-content">
+                        <div class="chat-content-header">
+                            <div class="chat-name">{{contact.name}}</div>
+                            <div class="chat-time">{{showtime | date:'shortTime'}}</div>
+                        </div>
+
+                        <div class="chat-msg">
+
+                        
+                        <div class="chat-content-msg">
+                            <i *ngIf="!contact.lastMsgRead" class="fa-solid fa-check-double " style="color: grey;"></i>
+                            <i *ngIf="contact.lastMsgRead" class="fa-solid fa-check-double " style="color: blue;"></i>
+                            {{contact.lastMsg}}
+
+                            
+                        
+                        </div>
+                        <div class="chat-edit">
+                        <a ><button routerLink="/edit-contact"><i class="fa-regular fa-pen-to-square "></i></button></a>
+                        <a  (click)="delete()"><button><i class="fa-solid fa-trash"></i></button></a>  
+                            
+                        </div>
+                        
+                        <!-- <div class="dropdown"> 
+                            <i id="dropdown" class="fa-solid fa-angle-down"></i>
+                            <div class="dropdown-content">
+                                <button class="drop-btn">Edit Contact</button>
+                                <button class="drop-btn">Delete Contact</button>
+                                <a href="#">Archive</a>
+                                
+                              </div>
+                            </div> -->
+                        </div>    
+
+                        
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- //////////////////////////////////////////////////////// -->
+<!-- ADD CONTACT SECTION -->
+
+    <input type="checkbox" id="click">
+
+<label for="click">
+  
+    <i class="fa-sharp fa-solid fa-plus"></i>
+    <i class="fa-sharp fa-solid fa-xmark"></i>
+
+</label>
+
+<div class="wrapper">
+    <div class="head-text">Add New Contact</div>
+    <div class="chat-box">
+        <!-- <div class="desc-texr">Add your</div> -->
+        <form  action="" [formGroup]="addContactPage">
+            <div class="field">
+                <input formControlName="name" name="lname" id="lname" type="text" placeholder="Name" required>
+
+            </div>
+
+            <div class="field">
+                <input formControlName="number" id="numb" name="numb" type="text" placeholder="Number" required>
+
+            </div>
+
+            <div class="field">
+                <input formControlName="city" name="city" id="city" type="text" placeholder="City" required>
+
+            </div>
+
+            <div class="field">
+                <button (click)="addContact()"  type="submit">Add Contact</button>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+

@@ -1,0 +1,194 @@
+<!-- Navigation-->
+<!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div id="main-div" class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#page-top"><img src="https://i.postimg.cc/d1gK6YzQ/w-chat1.webp" width="60px" alt="W chat logo"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+
+
+<div id="main" class="container-fluid">
+
+<div class="row">
+
+<div id="reg-img" class="col-6">
+<img src="../../assets/reg-page.png"  alt="">
+</div>
+
+
+<div id="register-form" class="container col-5">
+
+    <h2>W Chat</h2>
+
+    <form [formGroup]="registerPage">
+
+        <div class="group">
+            <input formControlName="fname" name="fname" id="fname" type="text" required>
+            <label class="label1">Name</label>
+            <label class="label2">Enter Your Name</label>
+            <div class="err-msg" *ngIf="this.registerPage.get('fname')?.errors && this.registerPage.get('fname')?.touched" style="color: red;">
+                Please Enter Valid Name
+            </div>
+
+        </div>
+
+        <div class="group">
+            <input formControlName="number" minlength="10" maxlength="10" name="num" id="num" type="text" required>
+            <label class="label1">Number</label>
+            <label class="label2">Enter Your Number</label>
+            <div class="err-msg" *ngIf="this.registerPage.get('number')?.errors && this.registerPage.get('number')?.touched" style="color: red;">
+                Please Enter Valid Number
+            </div>
+        </div>
+
+        <div class="group">
+            <input formControlName="age" name="agee" id="agee" type="text" required>
+            <label class="label1">Age</label>
+            <label class="label2">Enter Your Age</label>
+            <div class="err-msg" *ngIf="this.registerPage.get('age')?.errors && this.registerPage.get('age')?.touched" style="color: red;">
+                error
+            </div>
+        </div>
+
+        <div class="group">
+            <input formControlName="gender" name="mf" id="mf" maxlength="1" type="text" required >
+            <label class="label1">Gender</label>
+            <label class="label2">Male(M) / Female(F)</label>
+            <div class="err-msg" *ngIf="this.registerPage.get('gender')?.errors && this.registerPage.get('gender')?.touched" style="color: red;">
+                Please enter M or F 
+            </div>
+        </div>
+
+        <div class="group">
+            <input formControlName="password" name="pass" id="pass" type="password" required>
+            <label class="label1">Password</label>
+            <label class="label2">Create Password</label>
+            <div class="err-msg" *ngIf="this.registerPage.get('password')?.errors && this.registerPage.get('password')?.touched" style="color: red;">
+                error
+            </div>
+
+        </div>
+
+        <div id="register-btn" class="">
+            <button (click)="register()" type="submit" class="btn btn-primary">Register</button>
+        </div>
+
+        <div id="login-link">
+            <p>already have an account? <a routerLink="/login"> Login</a></p>
+            
+        </div>
+
+    </form>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<input type="checkbox" id="click">
+
+<label for="click">
+
+    <i class="fa-sharp fa-solid fa-plus"></i>
+    <i class="fa-sharp fa-solid fa-xmark"></i>
+
+</label>
+
+<div class="wrapper">
+    <div class="head-text">new contact</div>
+    <div class="chat-box">
+        <div class="desc-texr">asd jhh hajhj shjs jasj</div>
+        <form action="">
+            <div class="field">
+                <input type="text" placeholder="name" required>
+
+            </div>
+
+            <div class="field">
+                <input type="text" placeholder="number" required>
+
+            </div>
+
+            <div class="field">
+                <input type="text" placeholder="city" required>
+
+            </div>
+
+            <div class="field">
+                <button type="submit">Add </button>
+
+            </div>
+        </form>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

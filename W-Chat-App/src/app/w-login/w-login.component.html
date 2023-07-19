@@ -1,0 +1,142 @@
+<!-- Navigation-->
+<!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div id="main-div" class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#page-top"><img src="https://i.postimg.cc/d1gK6YzQ/w-chat1.webp" width="60px" alt="W chat logo"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+<div id="main" class="container-fluid">
+
+    <div class="row">
+
+    <div id="log-img" class="col-6">
+        <img src="../../assets/reg-page.png" alt="">
+    </div>
+
+<div id="login-form" class="container col-5">
+
+    <h2>W Chat</h2>
+
+    <form [formGroup]="loginPage">
+        <div class="group">
+            <input formControlName="number" name="num" id="num" type="text" required>
+            <label class="label1">Number</label>
+            <label class="label2">Enter Your Number</label>
+            <div class="err-msg" *ngIf="this.loginPage.get('number')?.errors && this.loginPage.get('number')?.touched" style="color: red;">
+                Please Enter valid Number
+            </div>
+        </div>
+
+
+        <div class="group">
+            <input formControlName="password" name="pass" id="pass" type="password" required>
+            <label class="label1">Password</label>
+            <label class="label2">Enter Your Password</label>
+            <div class="err-msg" *ngIf="this.loginPage.get('password')?.errors && this.loginPage.get('password')?.touched" style="color: red;">
+                Please enter 
+            </div>
+        </div>
+
+        <div id="login-btn" class="">
+            <button (click)="login()" type="button" class="btn btn-primary">Login</button>
+        </div>
+
+        <div id="register-link">
+            <p>New to W-Chat? <a routerLink="/register"> Sign Up</a></p>
+        </div>
+
+    </form>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div id="main-login-div">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5">
+                aaa
+            </div>
+
+
+            <div id="login-form" class="col-5 border border-3">
+                <div>
+                    <h2>W-Chat</h2>
+                </div>
+                <div id="form-div">
+                    <form action="">
+                        <div>
+                            <label for="">Phone number</label>
+                            <input type="text">
+                        </div>
+
+                        <div class="row">
+                             
+                            <label for="">Pin</label>
+                        <div class="col-md-3 pin">
+                           
+                            <input class="pin-inp" type="text" #txt1 maxlength="1" (keyup)="move($event, '', txt1, txt2)">
+                        </div>
+                        <div class="col-md-3 pin">
+                            
+                            <input class="pin-inp" type="text" #txt2 maxlength="1" (keyup)="move($event, txt1, txt2, txt3)">
+                        </div>
+                        <div class="col-md-3 pin">
+                       
+                            <input class="pin-inp" type="text" #txt3 maxlength="1" (keyup)="move($event, txt2, txt3, txt4)">
+                        </div>
+                        <div class="col-md-3 pin">
+                            
+                            <input class="pin-inp" type="text" #txt4 maxlength="1" (keyup)="move($event, txt3, txt4, '')">
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-primary">Login</button>
+                    </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> -->

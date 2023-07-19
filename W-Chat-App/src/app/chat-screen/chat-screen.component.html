@@ -1,0 +1,52 @@
+<div id="container" >
+    <div id="header">
+       
+            <div class="avatarSection">
+                <div class="picture">
+                    <img src="../../assets/profile pic.png" width="40px" alt="">
+                </div>
+                <!-- <div class="nameSection" *ngFor="let activecontact of displayName">{{activecontact.name}}</div> -->
+                <div class="nameSection">{{currentChat}}</div>
+            </div>
+            <div class="actionButtons">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+       
+    </div> 
+
+    <!-- BODY  -->
+    <div id="body">
+        <!-- <div class="message" [ngClass]="{me: message.me}" *ngFor="let message of conversation.messages"> -->
+            <div class="message" [ngClass]="{me: message.me}" *ngFor="let message of conversation.messages">
+
+            <div class="messageContent">{{message.body}}
+                <div class="time">{{showtime | date:'shortTime'}}</div>
+            </div>
+        </div>
+
+        <!-- <div class="message" [ngClass]="{me: message.me}" *ngFor="let message of conversation.messages">
+
+            <div class="messageContent">{{message.body}}
+                <div class="time">{{showtime | date:'shortTime'}}</div>
+            </div>
+        </div> -->
+    </div>
+
+
+    <!-- FOOTER  -->
+    <div id="footer">
+        <div id="footer-smiley">
+            <i (click)="emojiPickerVisible=!emojiPickerVisible" class="fa-regular fa-face-smile"></i>
+            <emoji-mart (emojiClick)="emojiClicked($event)" *ngIf="emojiPickerVisible" style="position: absolute; bottom: 50px;" title="Pick your emoji…" emoji="point_up"></emoji-mart>
+            <i class="fa-solid fa-paperclip"></i>
+        </div>
+        <div id="footer-text">
+            <input [(ngModel)]="message" (keyup.enter)="submitMessage($event)" type="text">
+            <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+        </div>
+        <div id="footer-mic">
+            <i class="fa-solid fa-microphone"></i>
+        </div>
+    </div>
+
+</div>

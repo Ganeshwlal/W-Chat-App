@@ -1,0 +1,6 @@
+
+<div id="delete" *ngIf="item" class=" text-center p-1" style="width: 500px;">
+    <h3>Do you want to Delete this contact {{item}}</h3>
+    <button (click)="delete()" class="btn btn-info">Yes</button>
+    <button (click)="cancel()" class="btn btn-success m-3">No</button>
+</div>

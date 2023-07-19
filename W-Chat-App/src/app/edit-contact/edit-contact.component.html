@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="main" >
+    
+
+   
+    <!-- *ngIf="edititem" -->
+    <form action="" [formGroup]="editContactPage">
+<div id="edit-icon">
+    <i class="fa-solid fa-user-pen"></i>
+</div>
+  
+    <h5>Edit Contact No: {{currentchatNum}} </h5>
+    <div class="inp-div">
+        <input formControlName="name" name="lname" id="lname" type="text" class="form-control" placeholder="{{currentChat}}">
+        <div class="err-msg" *ngIf="this.editContactPage.get('name')?.errors && this.editContactPage.get('name')?.touched" style="color: red;">
+            error
+        </div>
+    </div>
+    <div class="inp-div">
+        <input formControlName="number"  id="numb" name="numb"  type="text" class="form-control"   placeholder="{{currentchatNum}}">
+        <div class="err-msg" *ngIf="this.editContactPage.get('number')?.errors && this.editContactPage.get('number')?.touched" style="color: red;">
+            error
+        </div>
+    </div>
+    <div class="inp-div">
+        <input formControlName="city"  name="city" id="city" type="text" class="form-control" placeholder="{{currentcity}}">
+        <div class="err-msg" *ngIf="this.editContactPage.get('city')?.errors && this.editContactPage.get('city')?.touched" style="color: red;">
+            error
+        </div>
+    </div>
+    <div class="btn-div">
+        <button routerLink="/dashboard"   class="btn btn-info">Back</button>
+
+        <button (click)="editContact()"  class="btn btn-info">Update Contact</button>
+
+    </div>
+</form>
+</div>
+</div>

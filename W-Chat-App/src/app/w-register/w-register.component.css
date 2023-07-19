@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#mainNav {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: rgb(255, 81, 0);
+    transition: background-color 0.2s ease;
+}
+
+#mainNav .navbar-brand {
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    color: #212529;
+}
+
+/* #mainNav #main-div{
+      background-color: #f4623a;
+    } */
+
+#mainNav .navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.75rem 0;
+    margin-left: 80px;
+    /* width: 200px; */
+}
+
+/* .nav-link{
+     width: 200px;
+    } */
+
+.nav-link a {
+    color: white;
+    text-decoration: none;
+    /* width: 200px; */
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:hover,
+#mainNav .navbar-nav .nav-item .nav-link:active {
+    color: #000000;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active {
+    color: #000000 !important;
+}
+
+#navbarResponsive .nav-item .nav-link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+#navbarResponsive .nav-item:hover .nav-link:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* body {
+    background: url('../../assets/w-chat5\ orange.webp');
+} */
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#main {
+    /* margin-top: 75px;
+    background: url('../../assets/w-chat6back.jpg');
+    background-size: cover; */
+    /* background-image: linear-gradient( 129.1deg,  rgb(250, 218, 137) 26.8%, rgb(103, 243, 224) 114.1% ); */
+
+    background-color: #F7FFFF;
+}
+
+#reg-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#reg-img img {
+    width: 120%;
+    margin-left: 130px;
+}
+
+#register-form {
+
+
+    width: 450px;
+    /* margin: 50px auto 0; */
+    margin-left: 100px;
+    display: block;
+    padding: 10px 50px 50px;
+    border-radius: 20px;
+    /* margin-bottom: 50px; */
+    border: 0.1px solid rgba(0, 0, 0, 0.391);
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #f1592b;
+    font-size: 50px;
+    font-weight: bolder;
+
+}
+
+.group {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+input {
+    font-size: 18px;
+    padding: 10px 30px 10px 30px;
+    display: block;
+    /* width: 350px; */
+    width: 100%;
+    border-top: 1px solid #757575;
+    border-left: 1px solid #757575;
+    border-right: 1px solid #757575;
+    border-radius: 13px;
+    /* outline: none; */
+    /* border:none; */
+    /* border-bottom:1px solid #757575 ; */
+}
+
+input:focus {
+    outline: none;
+}
+
+
+.label2 {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 30px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.label1 {
+    color: #00000000;
+    font-size: 0px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 30px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+input:focus~.label1,
+input:valid~.label1 {
+
+    top: -25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #5264AE;
+    /* color: rgb(211, 51, 255); */
+    color: rgba(61, 61, 61, 0.809);
+
+
+}
+
+input:focus~.label2,
+input:valid~.label2 {
+
+    /* top: -25px; */
+    font-size: 0px;
+    /* color: #5264AE; */
+}
+
+.err-msg {
+    height: 0;
+}
+
+#register-btn {
+    /* height: 10vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+#register-btn button {
+    font-size: 20px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+#register-btn button:focus {
+    outline: none;
+}
+
+#login-link {
+    display: flex;
+    justify-content: end;
+}
+
+#login-link a {
+    text-decoration: none;
+    font-size: 20px;
+    /* float: right; */
+}
+
+
+
+
+
+
+
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+
+
+
+
+
+
+/* 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#click{
+    display: none;
+}
+label{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    height: 55px;
+    width: 55px;
+    background: -webkit-linear-gradient(left,orange, blue);
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+label i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+}
+
+label i.fa-xmark{
+    
+    opacity: 0;
+    pointer-events: none;
+}
+
+#click:checked ~ label i.fa-xmark{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+#click:checked ~ label i.fa-plus{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.wrapper{
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265,1.55);
+}
+#click:checked ~ .wrapper{
+    opacity: 1;
+    bottom: 85px;
+    pointer-events: auto;
+}
+
+.wrapper .head-text{
+    line-height: 60px;
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+    padding: 0 20px;
+    font-weight: 500;
+    font-size: 20px;
+    background: -webkit-linear-gradient(left,orange, blue);
+}
+.wrapper .chat-box{
+    padding: 20px;
+    width: 100%;
+}
+
+.chat-box .desc-text{
+    color:blue ;
+    text-align: center;
+    line-height: 25px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.chat-box form{
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.chat-box form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.chat-box form .field:last-child{
+    margin-bottom: 15px;
+}
+form .field input,
+form .field button{
+width: 100%;
+height: 100%;
+padding-left: 20px;
+border: 1px solid black;
+outline: none;
+border-radius: 25px;
+font-size: 16px;
+transition: all 0.3s ease;
+
+
+}
+
+form .field input:focus{
+    border-color: brown;
+}
+
+form .field input::placeholder{
+    color: blueviolet;
+    transition: all 0.3s ease;
+
+}
+
+form .field input:focus::placeholder{
+    color: chocolate;
+}
+
+.chat-box form .field button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: -webkit-linear-gradient(left,orange, blue);
+
+}
+
+.chat-box form .field button:active{
+    transform: scale(0.97);
+}
+ */
